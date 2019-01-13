@@ -3,12 +3,16 @@ a{text-decoration:none;curosr:pointer;color:#666666}
 
 ul li{list-style:none}
 .txt_c{text-align:center}
-.txt_b{font-weight:bold}
+.txt_b{font-weight:600}
 .dp_in_b{display:inline-block}
 .wth_100_p{width:100%}
 .dp_none{display:none}
 .flt_l{float:left}
 .flt_r{float:right}
+
+span#fileTit{cursor:pointer}
+
+#wrap{width:100%;position:relative}
 
 /* 서브 타이틀 */
 .sub_title{width:100%;margin-bottom:10px}
@@ -39,7 +43,7 @@ div.tab_wrap ul.tab_ul{border-bottom:1px solid #333333;display:inline-block;widt
 div.tab_wrap ul li.tab_li{float:left;border:1px solid #333333;margin-left:10px;height:38px;line-height:38px;width:120px;text-align:center;cursor:pointer;margin-bottom:-1px}
 div.tab_wrap ul li.tab_li.on{background:#333333;color:#fff}
 
-.contents_wrap{width:1100px;margin:0 auto;/* ;padding-bottom:90px */}
+.contents_wrap{width:1100px;margin:0 auto}
 .contents_wrap .contents{margin-bottom:10px}
 
 /* 내용 테이블 */
@@ -50,12 +54,8 @@ td.left{text-align:left!important;padding-left:20px!important}
 
 table.contents_tb.vw td{font-size:14px;color:#666666;text-align:center;padding:17px 0;border-top:1px solid #dddddd;border-bottom:1px solid #dddddd;line-height:1.8}
 
-table.contents_tb.wr input{width:96%;height:36px;line-height:36px;border:1px solid #ddd;border-radius:3px;text-indent:10px;color:#666}
 table.contents_tb.wr tr{border-top:1px solid #333333;border-bottom:1px solid #333333}
 table.contents_tb.wr td{border-bottom:none}
-table.contents_tb.wr textarea{width:94%;height:300px;border:1px solid #ddd;border-radius:3px;color:#666;resize:none;padding:10px 10px;font-size:16px}
-
-/* #contentsTbBody td a{cursor:pointer} */
 
 /* 이미지 내용 영역 */
 .img_contents_ul li{margin-bottom:20px;float:left}
@@ -69,3 +69,8 @@ table.contents_tb.wr textarea{width:94%;height:300px;border:1px solid #ddd;borde
 .btn_wrap input.edit_btn{width:80px;height:40px;line-height:40px;background:#ffce0b;border-radius:3px;font-size:14px;font-weight:bold;color:#fff;cursor:pointer;text-indent:0;border:1px solid #ddd}
 .btn_wrap input.del_btn{width:80px;height:40px;line-height:40px;background:#ED1B00;border-radius:3px;font-size:14px;font-weight:bold;color:#fff;cursor:pointer;text-indent:0;border:1px solid #ddd}
 .btn_wrap input.view_btn{width:80px;height:40px;line-height:40px;background:#2ca52a;border-radius:3px;font-size:14px;font-weight:bold;color:#fff;cursor:pointer;text-indent:0;border:1px solid #ddd}
+
+/* 페이징 */
+div.paging_div{height:40px;padding:10px;text-align:center}
+div.paging_div span{vertical-align:middle;border:1px solid #ddd;padding:5px 10px}
+div.paging_div span a{font-size:18px}

@@ -9,10 +9,10 @@
 		<div class="sub_title">
 			<div class="sub_title_top">
 				<div class="sub_title_inner">
-					<h2>Notice <span id="subTitSpan">공지사항을 등록 할 수 있습니다.</span></h2>
+					<h2>Notice <span>공지사항을 확인할 수 있습니다.</span></h2>
 					<ul class="sub_nav">
 						<li>홈 > 공지사항 > </li>
-						<li class="on" id="subTitLi">등록</li>
+						<li class="on">상세정보</li>
 					</ul>
 				</div>
 			</div>
@@ -20,39 +20,38 @@
 	
 		<!-- Contents Area -->
 		<div class="contents_wrap">
-			<!-- write -->
-			<form action="" id="noticeForm" method="post" enctype="multipart/form-data">
+			<!-- view -->
+			<form action="" id="noticeForm">
 				<input type="hidden" name="mode" id="mode" value="${param.mode}" />
 				<input type="hidden" name="noticeId" id="noticeId" value="${notice.noticeId}" />
-				<input type="hidden" name="fileYn" id="fileYn" value="${notice.fileNm}" />
 				
 				<div class="contents">
-					<!-- 등록 -->
-					<table class="contents_tb wr" id="contTb">
+					<!-- 상세 정보 -->
+					<table class="contents_tb vw" id="contTb">
 						<colgroup>
 							<col width="20%">
 							<col width="*">
 						</colgroup>
-						<tbody id="contentsTbBody">
+						<tbody>
 							<tr>
 								<th scope="col">제목</th>
+								<td class="left">${notice.title}</td>
+							</tr>
+							<tr>
+								<th scope="col">내용</th>
+								<td class="left">${notice.contents}</td>
+							</tr>
+							<tr>
+								<th scope="col">파일</th>
 								<td class="left">
-									<input type="text" name="title" id="title" class="tit" value="${notice.title}" />
-								</td>
-							</tr>
-							<tr>
-								<th scope="col" colspan="2">내용</th>
-							</tr>
-							<tr>
-								<td colspan="2">
-									<textarea name="contents" id="contents">${notice.contents}</textarea>
-								</td>
-							</tr>
-							<tr>
-								<th scope="col">파일 첨부</th>
-								<td class="left" id="fileArea">
-									<input type="file" name="fileNm" id="fileNm" />
-									<span id="fileTit">${notice.fileNm}</span>
+									<c:choose>
+										<c:when test="${not empty notice.fileNm}">
+											<a href="jsp/comm/download.jsp?filename=${notice.fileNm}">${notice.fileNm}</a>
+										</c:when>
+										<c:otherwise>
+											첨부 파일이 없습니다.
+										</c:otherwise>
+									</c:choose>
 								</td>
 							</tr>
 						</tbody>
@@ -64,12 +63,8 @@
 			<div class="btn_wrap">
 				<div class="flt_r">
 					<input type="button" class="list_btn" id="listBtn" value="목록" />
-					<c:if test="${param.mode eq 'write'}">
-						<input type="button" class="write_btn" id="writeProCBtn" value="등록" />
-					</c:if>
-					<c:if test="${param.mode eq 'edit'}">
-						<input type="button" class="edit_btn" id="editProCBtn" value="수정" />
-					</c:if>
+					<input type="button" class="edit_btn" id="editBtn" value="수정" />
+					<input type="button" class="del_btn" id="delProCBtn" value="삭제" />
 				</div>
 			</div>
 		</div>

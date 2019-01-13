@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+
 <jsp:include page="/jsp/comm/top.jsp" flush="false" ></jsp:include>
 <link rel="stylesheet" type="text/css" href="/Kocofarm/css/module/schedule.css" />
 
@@ -52,31 +52,6 @@
 			<div class="contents">
 				<!-- 목록 보기 -->
 				<table class="contents_tb" id="contTb">
-						<tr>
-							<td>project_id</td>
-							<td>title</td>
-							<td>project_leader</td>
-							<td>emp_id</td>
-							<td>project_start_dt</td>
-							<td>project_end_dt</td>
-							<td>project_reg_dt</td>
-							<td>project_completion</td>
-							<td>public_project</td>							
-						</tr>
-						
-					<c:forEach var="project" items="${projectList}">
-						<tr>
-							<td>${project.project_id}</td>
-							<td><a href="projectBoardRead.do?project_id=${project.project_id}">${project.title}</a></td>
-							<td>${project.project_leader}</td>
-							<td>${project.emp_id}</td>
-							<td>${project.project_start_dt}</td>
-							<td>${project.project_end_dt}</td>
-							<td>${project.project_reg_dt}</td>
-							<td>${project.project_completion}</td>
-							<td>${project.public_project}</td>
-						</tr>
-					</c:forEach>
 				
 				</table>
 			</div>

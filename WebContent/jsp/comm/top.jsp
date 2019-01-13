@@ -18,7 +18,7 @@
 							<li><a href="employees.do">인사 관리</a></li>
 							<li><a href="approval.do">문서 결재</a></li>
 							<li><a href="rent.do">대여 관리</a></li>
-							<li><a href="schedule/schedule.do">일정 관리</a></li>
+							<li><a href="schedule.do">일정 관리</a></li>
 						</ul><!-- gnb E -->
 					</nav><!-- gnb_inner E -->
 				</div>

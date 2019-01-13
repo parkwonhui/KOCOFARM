@@ -6,8 +6,10 @@
 <configuration>
 	<typeAliases>
 		<!-- 줄여서 지칭 -->
-		<typeAlias type="kosta.model.module.vo.Notice" alias="Notice" />
-		<typeAlias type="kosta.model.module.vo.NoticeSearch" alias="NoticeSearch" />
+		<typeAlias type="kosta.model.module.vo.schedule.Project" alias="Project" />
+		<typeAlias type="kosta.model.module.vo.schedule.Category" alias="Category" />	
+		<typeAlias type="kosta.model.module.vo.schedule.Calender" alias="Calender" />
+		<typeAlias type="kosta.model.module.vo.schedule.Employee" alias="Employee" />
 	</typeAliases>
 	
 	<environments default="development">
@@ -25,7 +27,7 @@
 		<!-- 매퍼 매핑 -->
 		
 		<!-- 공지사항 -->
-		<mapper resource="kosta/mapper/Notice.xml" />
+		<mapper resource="kosta/mapper/schedule/Schedule.xml" />
 		
 	</mappers>
 	

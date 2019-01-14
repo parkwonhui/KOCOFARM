@@ -144,4 +144,47 @@ $(function(event){
   if (event.target == modal) {
     modal.style.display = "none";
   }
+  
+  
+  
 });
+
+/* 일정 데이터 전달 */
+var add_category_id = 0;		// 카테고리 아이디
+var add_project_id = 0;			// 프로젝트 아이디
+// 일정 추가 버튼 '+' 눌렀을 때
+$(document).on("click", "#calenderWriteBtn", function(){
+	var par = $(this).parent();	// 부모노드
+ 	var category_id = $(par).children().eq(1).val();
+ 	var project_id = $(par).children().eq(2).val();
+	
+ 	add_category_id = category_id;
+	add_project_id = project_id;
+});
+
+// 일정 추가 버튼 눌렀을 때
+$('#calender_add').click(function() {
+	
+	 var write = $("input[name=write]").val();
+	 var color = $("input[name=color]").val();
+	 var completion_per = $("input[name=completion_per]").val();
+	 var tag = $("input[name=tag]").val();
+	 
+	 console.log("write:"+write);
+	 console.log("color:"+color);
+	 console.log("completion_per:"+completion_per);
+	 console.log("tag:"+tag);
+	 
+		  
+	  $.ajax({
+	    type:"POST",
+	    data : { project_id:add_project_id, category_id:add_category_id,write:write,color:color, completion_per:completion_per,tag:tag  },
+	    dataType:"json",
+	    url:"./calenderWrite.do",
+	    success: function(data) {
+	    	console.log("성공!");
+	      
+	    },
+	  });
+	  
+	});

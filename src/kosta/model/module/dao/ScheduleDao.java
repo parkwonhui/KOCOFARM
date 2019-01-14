@@ -62,7 +62,7 @@ public class ScheduleDao {
 		return list;
 	}
 	
-	public void insertCelender(ScheduleCalender cheduleCalender){
+	public int insertCelender(ScheduleCalender cheduleCalender){
 		int re = -1;
 		SqlSession sqlSession = getSqlSessionFaction().openSession();
 		try{
@@ -78,5 +78,7 @@ public class ScheduleDao {
 		}finally{
 			sqlSession.close();
 		}
+		
+		return re;
 	}
 }

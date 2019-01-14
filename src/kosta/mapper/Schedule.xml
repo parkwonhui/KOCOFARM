@@ -18,8 +18,8 @@
 	ON cal.category_id = cat.category_id
 	order by cat.category_id, y_pos
 </select>
-<insert id="insertCelender" parameterType="ScheduleCalender">
-	insert into Calender values(calender_seq.nextval, #{calender_id}, #{start_dt}, #{end_dt}, #{background_color}, #{completion_per}, #{y_pos}, #{category_id}, #{tag_id});
+<insert id="insertCelender" parameterType="Calender">
+       insert into Calender values(calender_seq.nextval, #{calender_id},  #{start_dt}, #{end_dt}, #{background_color}, #{completion_per}, #{y_pos},  #{category_id}, #{tag_id})
 </insert>
 
 </mapper>

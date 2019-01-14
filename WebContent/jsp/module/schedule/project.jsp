@@ -32,10 +32,10 @@
 <div class="con">
      <c:forEach var="category" items="${categoryList}">
 	   	<ul class="li_common_style li1">
-	    <li>${ category.category_name }<button type="button" class="btn btn-primary" id="calenderWriteBtn">+</button>
+	    <li class="claender_info">${ category.category_name }<button type="button" class="btn btn-primary" id="calenderWriteBtn">+</button>
 	    <!-- 클릭한 calenderWriteBtn 버튼 밑의 input type -->
-	   	<input type="hidden" class="this_category_id" value="${ category.category_id }"/>
-	    <input type="hidden" class="this_project_id" value="${ category.project_id }"/>
+	   	<input type="hidden" class="this_category_id" value="${ category.category_id }" />
+	    <input type="hidden" class="this_project_id" value="${ category.project_id }" />
 	    </li>
 	     <c:forEach var="calender" items="${calenderList}">
 	     <c:if test="${category.category_id == calender.category_id}">
@@ -58,21 +58,23 @@
   <div class="modal-content">
     <span class="close">&times;</span>
   
-<form action="CalenderWrite.do" method="post">
+<!-- <form> -->
  <div class="form-group">
     <label>새 일정 추가</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <input type="text" name="write"></input>
   </div>
 	<div><button type="button" class="btn btn-success">날짜 선택</button></div>
-	<div><label>칼라 선택</label></div>
+	<div><label>칼라 입력</label></div>
+	<input type="text" name="color"></input>
 	<div><label>완료도 설정</label></div>
+	<input type="text" name="completion_per"></input>
 	<div><button class="btn btn-warning" name="tag">태그 선택</button></div>
 	<div><button class="btn btn-secondary" name="worker_list">작업자 선택</button></div>
-  <div class="form-check">
-  <Button type="submit" class="btn btn-primary">일정 추가</Button>
-  </div>
+<!--  <div class="form-check">-->
+  <Button class="btn btn-primary" id="calender_add">일정 추가</Button>
+<!--    </div>-->
   
-</form>
+<!--</form> -->
 </div>
   
 </div>

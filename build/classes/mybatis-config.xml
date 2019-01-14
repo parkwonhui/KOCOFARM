@@ -10,6 +10,9 @@
 		<typeAlias type="kosta.model.module.vo.Notice" alias="Notice" />
 		<typeAlias type="kosta.model.module.vo.NoticeSearch" alias="NoticeSearch" />
 		<!-- 공지사항 E -->
+		<typeAlias type="kosta.model.module.vo.Approval" alias="Approval" />
+		<typeAlias type="kosta.model.module.vo.ApprovalSearch" alias="ApprovalSearch" />
+	
 	</typeAliases>
 	
 	<environments default="development">
@@ -28,6 +31,7 @@
 		
 		<!-- 공지사항 -->
 		<mapper resource="kosta/mapper/Notice.xml" />
+		<mapper resource="kosta/mapper/Approval.xml"/>
 		
 	</mappers>
 	

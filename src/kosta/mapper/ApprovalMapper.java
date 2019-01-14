@@ -1,7 +1,7 @@
 package kosta.mapper;
 
-import kosta.model.module.vo.ApprovalDraft;
-import kosta.model.module.vo.ApprovalVacation;
+import kosta.model.module.ApprovalDraft;
+import kosta.model.module.ApprovalVacation;
 
 public interface ApprovalMapper {
 	int insertDraft(ApprovalDraft draft);

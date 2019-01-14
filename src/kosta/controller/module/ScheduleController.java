@@ -13,7 +13,7 @@ import kosta.action.comm.ActionForward;
 import kosta.action.comm.IAction;
 import kosta.action.module.schedule.ProjectBoardList;
 
-@WebServlet("/schedule/*")
+@WebServlet({"schedule.do", "projectBoardRead.do"})
 public class ScheduleController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	       

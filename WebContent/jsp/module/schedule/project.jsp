@@ -1,5 +1,5 @@
-<%@ page import="kosta.model.module.vo.scheduleCategory" %>
-<%@ page import="kosta.model.module.vo.scheduleCalender" %>
+<%@ page import="kosta.model.module.vo.ScheduleCategory" %>
+<%@ page import="kosta.model.module.vo.ScheduleCalender" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

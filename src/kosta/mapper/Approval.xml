@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kosta.mapper.AppovalMapper">
+	<cache/>
+	
+	<!-- 기안서 입력  -->
+	<insert id = "insertDraft" parameterType = "ApprovalDraft">
+		insert into Draft values(seq_draft.nextval,#{draft_name},sysdate,#{draft_title},#{emp_id},#{draft_year},'1','기안중')
+	</insert>
+	
+	<!-- 휴가 폼 입력 -->
+<!-- 	<insert id = "insertVacation" parameterType = "ApprovalVacation">
+	
+	</insert>
+	 -->
+	 
+	<!-- 결재 폼 입력 -->
+	<insert id = "insertExpence" parameterType = "ApprovalExpence">
+		
+	</insert>
+	 -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</mapper>

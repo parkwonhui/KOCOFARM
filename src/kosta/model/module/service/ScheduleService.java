@@ -34,7 +34,7 @@ public class ScheduleService {
 		scheduleCalender.setStart_dt("");
 		scheduleCalender.setEnd_dt("");
 		scheduleCalender.setTag_id(0);
-		scheduleCalender.setY_pos(9);		// y개수를 알아야한다
+		scheduleCalender.setY_pos(9);		//몇번째인지 값 가져올 것
 
 			
 		int re = dao.insertCelender(scheduleCalender);

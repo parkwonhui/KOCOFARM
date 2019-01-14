@@ -23,7 +23,7 @@ public class InsertDraftAction implements IAction {
 		apprdao.insertDraft(draft);
 		
 		forward.setRedirect(false);
-		forward.setPath("/jsp/module/approval/vacationForm.jsp");
+		forward.setPath("/jsp/module/approval/list.jsp");
 		
 		return forward;
 	}

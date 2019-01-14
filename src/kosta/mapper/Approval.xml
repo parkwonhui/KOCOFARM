@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="kosta.mapper.AppovalMapper">
+<mapper namespace="kosta.mapper.ApprovalMapper">
 	<cache/>
 	
 	<!-- 기안서 입력  -->
 	<insert id = "insertDraft" parameterType = "ApprovalDraft">
-		insert into Draft values(seq_draft.nextval,#{draft_name},sysdate,#{draft_title},#{emp_id},#{draft_year},'1','기안중')
+		insert into DRAFT values(seq_draft.nextval,#{draftName},SYSDATE,#{draftTitle},1,#{draftYear},1,'기안중')
 	</insert>
 	
 	<!-- 휴가 폼 입력 -->
@@ -20,9 +20,7 @@
 		insert into Expence_foam values(seq_expence_foar.nextval,#{foam_id},sysdate,#{expence_type},#{customer_name},#{expence_price},
 			#{commisstion_option},#{commission_price},#{sum_prise})
 	</insert>
-	 
-	
-	
+
 	
 	
 	

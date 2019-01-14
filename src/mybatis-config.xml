@@ -9,7 +9,8 @@
 		<!-- 공지사항 S -->
 		<typeAlias type="kosta.model.module.vo.Notice" alias="Notice" />
 		<typeAlias type="kosta.model.module.vo.NoticeSearch" alias="NoticeSearch" />
-		<!-- 공지사항 E -->
+		<!-- 결재 -->
+		<typeAlias type="kosta.model.module.vo.InsertList" alias="InsertlList"/>
 		<typeAlias type="kosta.model.module.vo.ApprovalDraft" alias="ApprovalDraft" />
 		<typeAlias type="kosta.model.module.vo.ApprovalSearch" alias="ApprovalSearch" />
 		<typeAlias type="kosta.model.module.vo.ApprovalVacation" alias="ApprovalVacation" />

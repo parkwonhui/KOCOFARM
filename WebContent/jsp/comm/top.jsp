@@ -16,7 +16,7 @@
 						<ul class="gnb">
 							<li><a href="noticeList.do">공지사항</a></li>
 							<li><a href="employees.do">인사 관리</a></li>
-							<li><a href="insertDraftForm.do">문서 결재</a></li>
+							<li><a href="listDraft.do">문서 결재</a></li>
 							<li><a href="rent.do">대여 관리</a></li>
 							<li><a href="schedule.do">일정 관리</a></li>
 						</ul><!-- gnb E -->

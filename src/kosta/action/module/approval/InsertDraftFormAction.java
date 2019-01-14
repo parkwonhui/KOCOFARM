@@ -11,8 +11,8 @@ public class InsertDraftFormAction implements IAction {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = new ActionForward();
-		forward.setRedirect(false);  //dispatch할꺼야  true면 redirect실행
-		forward.setPath("jsp/module/approval/vacationForm.jsp"); //path정보 입력
+		forward.setRedirect(false);  //dispatch�븷爰쇱빞  true硫� redirect�떎�뻾
+		forward.setPath("jsp/module/approval/list.jsp"); //path�젙蹂� �엯�젰
 		return forward;
 	}
 

@@ -7,8 +7,7 @@ import kosta.action.comm.ActionForward;
 import kosta.action.comm.IAction;
 import kosta.model.module.dao.ApprovalDao;
 import kosta.model.module.vo.ApprovalExpence;
-import kostat.model.Board;
-import kostat.model.BoardDao2;
+
 
 public class InsertExpence implements IAction {
 

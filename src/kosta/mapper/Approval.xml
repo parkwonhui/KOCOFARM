@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="kosta.mapper.NoticeMapper">
+<mapper namespace="kosta.mapper.AppovalMapper">
 	<cache/>
 	
 	<!-- 기안서 입력  -->
@@ -14,7 +14,12 @@
 	
 	</insert>
 	 -->
-	
+	 
+	<!-- 결재 폼 입력 -->
+	<insert id = "insertExpence" parameterType = "ApprovalExpence">
+		
+	</insert>
+	 -->
 	
 	
 	

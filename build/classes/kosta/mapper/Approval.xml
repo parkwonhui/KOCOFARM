@@ -4,13 +4,16 @@
 <mapper namespace="kosta.mapper.NoticeMapper">
 	<cache/>
 	
-	<insert id = "insertDraft" parameterType = "Draft">
-		insert into Approval values(seq_draft.nextval,#{draft_name},sysdate,#{draft_title},#{emp_id},#{draft_year},#{form_id},'기안중')
+	<!-- 기안서 입력  -->
+	<insert id = "insertDraft" parameterType = "ApprovalDraft">
+		insert into Draft values(seq_draft.nextval,#{draft_name},sysdate,#{draft_title},#{emp_id},#{draft_year},'1','기안중')
 	</insert>
 	
+	<!-- 휴가 폼 입력 -->
+<!-- 	<insert id = "insertVacation" parameterType = "ApprovalVacation">
 	
-	
-	
+	</insert>
+	 -->
 	
 	
 	

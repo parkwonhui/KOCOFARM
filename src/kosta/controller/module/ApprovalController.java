@@ -8,11 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import kosta.action.comm.IAction;
+import kosta.action.module.approval.InsertDraftAction;
 import kosta.action.comm.ActionForward;
-import kosta.action.module.ApprovalAction;
 
 
-@WebServlet("/Approval.do")
+@WebServlet("/apprInsertDraft.do")
 public class ApprovalController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -28,7 +28,14 @@ public class ApprovalController extends HttpServlet {
     	IAction action = null;
     	ActionForward forward = null;
     	
-  
+    	if(command.equals("apprInsertDraft.do")){
+    		action = new InsertDraftAction(); //액션 생성->호출
+    		try {
+				forward = action.execute(request, response); 
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}
     	
     }
 

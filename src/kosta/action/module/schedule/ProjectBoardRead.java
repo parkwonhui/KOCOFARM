@@ -18,9 +18,7 @@ public class ProjectBoardRead implements IAction{
 	public ProjectBoardRead() {}
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		
-		request.setCharacterEncoding("utf-8");
-		
+
 		String strProjectId = request.getParameter("project_id");
 		int projectId = Integer.parseInt(strProjectId);
 		

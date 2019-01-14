@@ -25,7 +25,6 @@ public class ProjectBoardList implements IAction{
 		ScheduleDao dao = ScheduleDao.getInstance();
 		List<ScheduleProject> project = dao.listProject();
 		
-		request.setCharacterEncoding("utf-8");
 		request.setAttribute("projectList", project);
 		
 		forward.setRedirect(false);

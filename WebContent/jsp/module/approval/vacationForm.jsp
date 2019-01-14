@@ -44,15 +44,16 @@
 
 	}
 </style>
-
+<form action= "apprInsertDraft.do" method = "post" >
 <div class = "vacation_wrap">
 	<div class = "title">
 		<h1>휴 가 신 청 서</h1>
 	</div>
-		<div class="vac_table">
 		<!-- vacation table 시작 -->
+		<div class="vac_table">
 			<table width= 1200 border=1 cellpadding=0 cellspacing=0 align="center">
 				<tr>
+	
 					<td rowspan="3">기안서 정보</td>
 					<td>기안서 번호</td>
 					<td colspan="3"><input type="text" name="draft_id" size = 65></td>
@@ -155,11 +156,11 @@
 			
 			<div class = "flt_r">
 				<br><br>
-				<input type = "submit" value = "저장하기" >
+				<!-- <input type = "submit" value = "저장하기" > -->
 				<input type = "submit" value = "제출" >
 			</div>
-		
-</div>
+		</div>
+	</form>
 </body>
 </html>
 </body>

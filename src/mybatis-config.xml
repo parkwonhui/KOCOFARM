@@ -13,6 +13,7 @@
 		<typeAlias type="kosta.model.module.vo.ApprovalDraft" alias="ApprovalDraft" />
 		<typeAlias type="kosta.model.module.vo.ApprovalSearch" alias="ApprovalSearch" />
 		<typeAlias type="kosta.model.module.vo.ApprovalVacation" alias="ApprovalVacation" />
+		<typeAlias type="kosta.model.module.vo.ApprovalExpence" alias="ApprovalExpence" />
 	
 	</typeAliases>
 	

@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import kosta.action.comm.ActionForward;
 import kosta.action.comm.IAction;
 
-public class InsertExpenceAction implements IAction {
+public class InsertExpenceActionForm implements IAction {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -17,7 +17,7 @@ public class InsertExpenceAction implements IAction {
 		
 		
 		
-		return null;
+		return forward;
 	}
 
 }

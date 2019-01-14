@@ -25,7 +25,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="apprInsertDraft.do" method="post">
+	<form action="InsertExpenceAction.do" method="post">
 		<div class="expence_wrap">
 			<div class="title" align="center">
 				<h1>지 출 결 의 서</h1>
@@ -124,13 +124,33 @@
 							style="text-align: center"> <input type="text" size="20"
 							style="text-align: center"> <input type="text" size="20"
 							style="text-align: center"></td>
-						<td><input type="text" size="20" style="text-align: right">
+						<td><input type="text" size="20" style="text-align: right vertical-align: bottom; ">
 							<input type="text" size="20" style="text-align: right"> <input
 							type="text" size="20" style="text-align: right"> <input
 							type="text" size="20" style="text-align: right"> <input
 							type="text" size="20" style="text-align: right"></td>
-						<td colspan="3"><select>
-								<option value='' selected>-- Y or N --</option>
+						<td colspan="3" ><select style="margin-bottom:4px;">
+								<option value=''selected >-- Y or N --</option>
+								<option value="1111">Y
+								<option value="2222">N
+						</select>
+						<select style="margin-bottom:4px;">
+								<option value='' selected style="vertical-align: bottom;">-- Y or N --</option>
+								<option value="1111">Y
+								<option value="2222">N
+						</select>
+						<select style="margin-bottom:4px;">
+								<option value='' selected style="vertical-align: bottom;">-- Y or N --</option>
+								<option value="1111">Y
+								<option value="2222">N
+						</select>
+						<select style="margin-bottom:4px;">
+								<option value='' selected style="vertical-align: bottom;">-- Y or N --</option>
+								<option value="1111">Y
+								<option value="2222">N
+						</select>
+						<select style="margin-bottom:4px;">
+								<option value='' selected style="vertical-align: bottom;">-- Y or N --</option>
 								<option value="1111">Y
 								<option value="2222">N
 						</select></td>
@@ -158,11 +178,14 @@
 								</p>
 							</div>
 						</td>
-
 					</tr>
 
 				</table>
-
+				<p></p>
+				<div align="center">
+					<!-- <input type = "submit" value = "저장하기" > -->
+					<input type="submit" value="제출하기">
+				</div>
 			</div>
 		</div>
 	</form>

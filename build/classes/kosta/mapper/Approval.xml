@@ -19,8 +19,6 @@
 	<insert id = "insertExpence" parameterType = "ApprovalExpence">
 		
 	</insert>
-	 -->
-	
 	
 	
 	

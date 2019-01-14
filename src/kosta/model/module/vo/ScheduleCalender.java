@@ -1,9 +1,9 @@
-package kosta.model.module.vo.schedule;
+package kosta.model.module.vo;
 
 import java.io.Serializable;
 import java.util.Date;
 
-public class Calender implements Serializable{
+public class ScheduleCalender implements Serializable{
 
 	private int calender_id;
 	private String title;
@@ -16,10 +16,10 @@ public class Calender implements Serializable{
 	private int category_id;
 	private int tag_id;
 		
-	public Calender() {
+	public ScheduleCalender() {
 	}
 
-	public Calender(int calender_id, String title, String start_dt, String end_dt, String background_color,
+	public ScheduleCalender(int calender_id, String title, String start_dt, String end_dt, String background_color,
 			int completion_per, int x_pos, int y_pos, int category_id, int tag_id) {
 		super();
 		this.calender_id = calender_id;

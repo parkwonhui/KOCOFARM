@@ -1,14 +1,14 @@
-package kosta.model.module.vo.schedule;
+package kosta.model.module.vo;
 
 import java.io.Serializable;
 
-public class Employee implements Serializable{
+public class ScheduleEmployee implements Serializable{
 	private long emp_id;
 
-	public Employee() {
+	public ScheduleEmployee() {
 	}
 
-	public Employee(long empId) {
+	public ScheduleEmployee(long empId) {
 		super();
 		this.emp_id = empId;
 	}

@@ -7,11 +7,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import kosta.action.comm.ActionForward;
 import kosta.action.comm.IAction;
-import kosta.model.module.dao.schedule.ScheduleDao;
-import kosta.model.module.vo.schedule.Calender;
-import kosta.model.module.vo.schedule.Category;
-import kosta.model.module.vo.schedule.Employee;
-import kosta.model.module.vo.schedule.Project;
+import kosta.model.module.dao.ScheduleDao;
+import kosta.model.module.vo.ScheduleCalender;
+import kosta.model.module.vo.ScheduleCategory;
+import kosta.model.module.vo.ScheduleEmployee;
+import kosta.model.module.vo.ScheduleProject;
 
 public class ProjectBoardList implements IAction{
 
@@ -23,7 +23,7 @@ public class ProjectBoardList implements IAction{
 		ActionForward forward = new ActionForward();
 		
 		ScheduleDao dao = ScheduleDao.getInstance();
-		List<Project> project = dao.listProject();
+		List<ScheduleProject> project = dao.listProject();
 		
 		request.setCharacterEncoding("utf-8");
 		request.setAttribute("projectList", project);

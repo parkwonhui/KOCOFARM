@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import kosta.action.comm.ActionForward;
 import kosta.action.comm.IAction;
-import kosta.model.module.dao.schedule.ScheduleDao;
-import kosta.model.module.vo.schedule.Calender;
-import kosta.model.module.vo.schedule.Category;
+import kosta.model.module.dao.ScheduleDao;
+import kosta.model.module.vo.ScheduleCalender;
+import kosta.model.module.vo.ScheduleCategory;
 
 public class ProjectBoardRead implements IAction{
 
@@ -26,8 +26,8 @@ public class ProjectBoardRead implements IAction{
 		
 		ActionForward forward = new ActionForward();
 		ScheduleDao dao = ScheduleDao.getInstance();
-		List<Category> categoryList = dao.listCategory(projectId);
-		List<Calender> calenderList = dao.listCalender(projectId);
+		List<ScheduleCategory> categoryList = dao.listCategory(projectId);
+		List<ScheduleCalender> calenderList = dao.listCalender(projectId);
 		
 		System.out.println(categoryList);
 		System.out.println(calenderList);

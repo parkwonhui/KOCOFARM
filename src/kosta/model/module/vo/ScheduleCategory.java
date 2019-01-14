@@ -1,18 +1,18 @@
-package kosta.model.module.vo.schedule;
+package kosta.model.module.vo;
 
 import java.io.Serializable;
 
-public class Category implements Serializable {
+public class ScheduleCategory implements Serializable {
 	private int category_id;
 	private String category_name;
 	private int project_id;
 	private int category_x_pos;
 
-	public Category() {
+	public ScheduleCategory() {
 	
 	}
 
-	public Category(int category_id, String category_name, int project_id, int category_x_pos) {
+	public ScheduleCategory(int category_id, String category_name, int project_id, int category_x_pos) {
 		super();
 		this.category_id = category_id;
 		this.category_name = category_name;

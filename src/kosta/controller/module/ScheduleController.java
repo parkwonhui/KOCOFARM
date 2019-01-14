@@ -29,7 +29,7 @@ public class ScheduleController extends HttpServlet {
 		
 		String requestURI = request.getRequestURI();
 		String contextPath = request.getContextPath();
-		String schedule = "schedule";					// WebSesrvlet 이름
+		String schedule = "schedule";					// WebSesrvlet �씠由�
 		String command = requestURI.substring(contextPath.length()+1+schedule.length()+1);
 		System.out.println("command:"+requestURI);
 		System.out.println("command:"+contextPath);
@@ -38,10 +38,6 @@ public class ScheduleController extends HttpServlet {
 		IAction action = null;
 		ActionForward forward = null;
 		action = scheduleManager.getScheduleManager(command);
-		if(null == action) {
-			System.out.println("action null");
-		}
-		System.out.println("action:"+action);
 
 		try {
 			

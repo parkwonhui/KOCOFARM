@@ -1,4 +1,4 @@
-package kosta.model.module.dao.schedule;
+package kosta.model.module.dao;
 
 import java.io.InputStream;
 import java.util.List;
@@ -7,11 +7,11 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import kosta.mapper.schedule.ScheduleMapper;
-import kosta.model.module.vo.schedule.Calender;
-import kosta.model.module.vo.schedule.Category;
-import kosta.model.module.vo.schedule.Employee;
-import kosta.model.module.vo.schedule.Project;
+import kosta.mapper.ScheduleMapper;
+import kosta.model.module.vo.ScheduleCalender;
+import kosta.model.module.vo.ScheduleCategory;
+import kosta.model.module.vo.ScheduleEmployee;
+import kosta.model.module.vo.ScheduleProject;
 import sun.security.jca.GetInstance;
 
 import org.apache.ibatis.io.Resources;
@@ -38,27 +38,27 @@ public class ScheduleDao {
 		return new SqlSessionFactoryBuilder().build(in);
 	}
 	
-	public List<Employee> listEmployee() {
+	public List<ScheduleEmployee> listEmployee() {
 		SqlSession sqlSession = getSqlSessionFaction().openSession();
-		List<Employee> list = sqlSession.getMapper(ScheduleMapper.class).listEmployee();
+		List<ScheduleEmployee> list = sqlSession.getMapper(ScheduleMapper.class).listEmployee();
 		return list;
 	}
 
-	public List<Project> listProject() {
+	public List<ScheduleProject> listProject() {
 		SqlSession sqlSession = getSqlSessionFaction().openSession();
-		List<Project> list = sqlSession.getMapper(ScheduleMapper.class).listProject();
+		List<ScheduleProject> list = sqlSession.getMapper(ScheduleMapper.class).listProject();
 		return list;	
 	}
 
-	public List<Category> listCategory(int projectId){
+	public List<ScheduleCategory> listCategory(int projectId){
 		SqlSession sqlSession = getSqlSessionFaction().openSession();
-		List<Category> list = sqlSession.getMapper(ScheduleMapper.class).listCategory(projectId);
+		List<ScheduleCategory> list = sqlSession.getMapper(ScheduleMapper.class).listCategory(projectId);
 		return list;
 	}
 
-	public List<Calender> listCalender(int projectId) {
+	public List<ScheduleCalender> listCalender(int projectId) {
 		SqlSession sqlSession = getSqlSessionFaction().openSession();
-		List<Calender> list = sqlSession.getMapper(ScheduleMapper.class).listCalender(projectId);
+		List<ScheduleCalender> list = sqlSession.getMapper(ScheduleMapper.class).listCalender(projectId);
 		return list;
 	}
 }

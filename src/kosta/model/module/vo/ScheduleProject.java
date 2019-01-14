@@ -1,13 +1,13 @@
-package kosta.model.module.vo.schedule;
+package kosta.model.module.vo;
 
 import java.io.Serializable;
 import java.util.Date;
 
-public class Project implements Serializable{
+public class ScheduleProject implements Serializable{
 
 	private long project_id;
 	private String title;
-	private long project_leader;		// ÌîÑÎ°úÏ†ùÌä∏ ÌåÄÏû•
+	private long project_leader;		// ?îÑÎ°úÏ†ù?ä∏ ???û•
 	private long emp_id;
 	private String project_start_dt;
 	private String project_end_dt;
@@ -15,11 +15,11 @@ public class Project implements Serializable{
 	private int project_completion;
 	private boolean public_project;
 	
-	public Project() {
+	public ScheduleProject() {
 	
 	}
 
-	public Project(long project_id, String title, long project_leader, long emp_id, String project_start_dt,
+	public ScheduleProject(long project_id, String title, long project_leader, long emp_id, String project_start_dt,
 			String project_end_dt, int project_reg_dt, int project_completion, boolean public_project) {
 		super();
 		this.project_id = project_id;

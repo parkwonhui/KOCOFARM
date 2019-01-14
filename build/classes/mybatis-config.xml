@@ -12,6 +12,7 @@
 		<!-- 공지사항 E -->
 		<typeAlias type="kosta.model.module.vo.Approval" alias="Approval" />
 		<typeAlias type="kosta.model.module.vo.ApprovalSearch" alias="ApprovalSearch" />
+	
 	</typeAliases>
 	
 	<environments default="development">

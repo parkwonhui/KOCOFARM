@@ -24,9 +24,9 @@ public class NoticeService {
 		return noticeService;
 	}
 	
-	/* 紐⑸줉 */
+	/* 목록 */
 	public NoticeListModel getNoticeList(int requestPage, HttpServletRequest request)throws Exception{
-		/* 寃��깋 */
+		/* 검색 */
 		String schType = request.getParameter("schType");
 		String schWord = request.getParameter("schWord");
 		
@@ -42,19 +42,19 @@ public class NoticeService {
 			search = (NoticeSearch)session.getAttribute("search");
 		}
 		
-		/* �럹�씠吏� �꽕�씠�뀡 */
-		// 珥� 湲� 媛� �닔
+		/* 페이지 네이션 */
+		// 총 글 개 수
 		int totalCount = dao.getNoticeListCnt(search);
 		
-		// 珥� �럹�씠吏� �닔
+		// 총 페이지 수
 		int totalPageCount = totalCount/PAGE_SIZE;
 		
-		// 寃뚯떆 湲� �굹癒몄�
+		// 게시 글 나머지
 		if(totalCount%PAGE_SIZE > 0){
 			totalPageCount++;
 		}
 		
-		// �떆�옉 �럹�씠吏�, 留덉�留� �럹�씠吏�
+		// 시작 페이지, 마지막 페이지
 		int startPage = requestPage - (requestPage-1)%PAGE_SIZE;
 		int endPage = startPage+(PAGE_SIZE-1);
 		
@@ -62,7 +62,7 @@ public class NoticeService {
 			endPage = totalPageCount;
 		}
 		
-		// �떆�옉 �뻾 援ы븯湲� : (�쁽�옱�럹�씠吏� -1) * �럹�씠吏� �떦 湲� 媛� �닔
+		// 시작 행 구하기 : (현재페이지 -1) * 페이지 당 글 개 수
 		int startRow = (requestPage-1)*PAGE_SIZE;
 		
 		List<Notice> list = dao.getNoticeList(search, startRow);
@@ -71,18 +71,18 @@ public class NoticeService {
 		return listModel;
 	}
 	
-	/* �긽�꽭�젙蹂� */
+	/* 상세정보 */
 	public Notice getNotice(HttpServletRequest request)throws Exception{
 		String noticeId = request.getParameter("noticeId") == null ? "" : request.getParameter("noticeId");
 		Notice notice = dao.getNotice(noticeId);
 		
 		if("view".equals(request.getParameter("mode"))){
-			/* 議고쉶 �닔 利앷� */
+			/* 조회 수 증가 */
 			int hitCnt = notice.getHitCnt()+1;
 			notice.setHitCnt(hitCnt);
 			dao.setUpHitCnt(notice);
 			
-			/* 移섑솚 */
+			/* 치환 */
 			String contentsVw = notice.getContents().replaceAll("\r\n", "<br/>");
 			notice.setContents(contentsVw);
 		}
@@ -90,9 +90,9 @@ public class NoticeService {
 		return notice;
 	}
 	
-	/* �벑濡� */
+	/* 등록 */
 	public int setNotice(HttpServletRequest request)throws Exception{
-		/* �뙆�씪 �뾽濡쒕뱶(寃쎈줈, �뙆�씪�겕湲�, �씤肄붾뵫, �뙆�씪 �씠由� 以묒꺽 �젙梨�) */
+		/* 파일 업로드(경로, 파일크기, 인코딩, 파일 이름 중첩 정책) */
 		String uploadPath = request.getRealPath("upload");
 		int size = 20 * 1024 * 1024; // 20MB
 		MultipartRequest multi = new MultipartRequest(request, uploadPath, size, "UTF-8", new DefaultFileRenamePolicy());
@@ -101,7 +101,7 @@ public class NoticeService {
 		notice.setTitle(multi.getParameter("title"));
 		notice.setContents(multi.getParameter("contents"));
 		
-		// �뙆�씪 �뾽濡쒕뱶
+		// 파일 업로드
 		if(multi.getFilesystemName("fileNm") != null){
 			String fileNm = multi.getFilesystemName("fileNm");
 			notice.setFileNm(fileNm);
@@ -114,9 +114,9 @@ public class NoticeService {
 		return re;
 	}
 	
-	/* �닔�젙 */
+	/* 수정 */
 	public int setUpNotice(HttpServletRequest request)throws Exception{
-		/* �뙆�씪 �뾽濡쒕뱶(寃쎈줈, �뙆�씪�겕湲�, �씤肄붾뵫, �뙆�씪 �씠由� 以묒꺽 �젙梨�) */
+		/* 파일 업로드(경로, 파일크기, 인코딩, 파일 이름 중첩 정책) */
 		String uploadPath = request.getRealPath("upload");
 		int size = 20 * 1024 * 1024; // 20MB
 		MultipartRequest multi = new MultipartRequest(request, uploadPath, size, "UTF-8", new DefaultFileRenamePolicy());
@@ -126,7 +126,7 @@ public class NoticeService {
 		notice.setContents(multi.getParameter("contents"));
 		notice.setNoticeId(multi.getParameter("noticeId"));
 		
-		// �뙆�씪 �뾽濡쒕뱶
+		// 파일 업로드
 		if(multi.getFilesystemName("fileNm") != null){
 			String fileNm = multi.getFilesystemName("fileNm");
 			notice.setFileNm(fileNm);
@@ -139,7 +139,7 @@ public class NoticeService {
 		return re;
 	}
 	
-	/* �궘�젣 */
+	/* 삭제 */
 	public int delNotice(HttpServletRequest request)throws Exception{
 		String noticeId = request.getParameter("noticeId") == null ? "" : request.getParameter("noticeId");
 		

@@ -1,0 +1,46 @@
+/* project.jsp 에서 사용하는 css */
+
+/* category와 관련있음 */
+.fl { float: left; }
+
+.handles span { cursor: move; }
+
+li.highlight { background: #FEE25F; }
+
+.connected {
+  float: left;
+  width: 200px;
+}
+
+/* 일정과 관련있음 */
+.con { margin-top:20px; }
+
+.category_class{
+display: inline-block;
+list-style:none;
+float:left;
+width:300px;
+	
+}
+
+.li_common_style{
+display: inline-block;
+list-style:none;
+float:left;
+width:300px;
+}
+
+.li1 li{
+
+border: 1px #000000 solid;
+margin-top:10px;
+margin-bottom:10px;
+
+}
+
+.li2 li{
+border: 1px #000000 solid;
+margin-top:10px;
+margin-bottom:10px;
+}
+

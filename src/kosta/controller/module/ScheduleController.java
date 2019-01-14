@@ -13,7 +13,7 @@ import kosta.action.comm.ActionForward;
 import kosta.action.comm.IAction;
 import kosta.action.module.schedule.ProjectBoardList;
 
-@WebServlet({"schedule.do", "projectBoardRead.do"})
+@WebServlet({"/schedule.do", "/projectBoardRead.do"})
 public class ScheduleController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	       
@@ -29,8 +29,7 @@ public class ScheduleController extends HttpServlet {
 		
 		String requestURI = request.getRequestURI();
 		String contextPath = request.getContextPath();
-		String schedule = "schedule";					// WebSesrvlet �씠由�
-		String command = requestURI.substring(contextPath.length()+1+schedule.length()+1);
+		String command = requestURI.substring(contextPath.length()+1);
 		System.out.println("command:"+requestURI);
 		System.out.println("command:"+contextPath);
 		System.out.println("command:"+command);

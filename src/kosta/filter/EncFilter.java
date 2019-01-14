@@ -14,23 +14,18 @@ import javax.servlet.http.HttpServletResponse;
 @WebFilter("*.do")
 public class EncFilter implements Filter {
 	
-    public EncFilter(){
-    	
-    }
+    public EncFilter(){}
 
-	public void destroy(){
-	
-	}
+	public void destroy(){}
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException{
+		/* request UTF-8설정 */
 		if(request.getCharacterEncoding() == null){
 			request.setCharacterEncoding("UTF-8");
 		}
 		chain.doFilter(request, response);
 	}
 
-	public void init(FilterConfig fConfig) throws ServletException{
-		
-	}
+	public void init(FilterConfig fConfig) throws ServletException{}
 
 }

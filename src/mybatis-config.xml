@@ -10,6 +10,10 @@
 		<typeAlias type="kosta.model.module.vo.schedule.Category" alias="Category" />	
 		<typeAlias type="kosta.model.module.vo.schedule.Calender" alias="Calender" />
 		<typeAlias type="kosta.model.module.vo.schedule.Employee" alias="Employee" />
+		<!-- 공지사항 S -->
+		<typeAlias type="kosta.model.module.vo.Notice" alias="Notice" />
+		<typeAlias type="kosta.model.module.vo.NoticeSearch" alias="NoticeSearch" />
+		<!-- 공지사항 E -->
 	</typeAliases>
 	
 	<environments default="development">

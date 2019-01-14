@@ -9,8 +9,6 @@
 	String fileName = request.getParameter("filename");
 	//String fileName = URLEncoder.encode(new String(fileName2.getBytes("8859_1"), "UTF-8"), "utf-8");
 	
-	System.out.println(fileName);
-	
 	// 실제 저장 경로
 	String uploadPath = request.getRealPath("upload");
 	String path = uploadPath.trim() + "\\" + fileName.trim();
@@ -36,5 +34,4 @@
 		System.out.println("ok");
 		e.printStackTrace();
 	}
-%>    
-    
+%>  

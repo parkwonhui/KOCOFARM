@@ -14,7 +14,7 @@
 							<a href="main.do"><img class="logo_img" /></a>
 						</div>
 						<ul class="gnb">
-							<li><a href="notice.do">공지사항</a></li>
+							<li><a href="noticeList.do">공지사항</a></li>
 							<li><a href="employees.do">인사 관리</a></li>
 							<li><a href="approval.do">문서 결재</a></li>
 							<li><a href="rent.do">대여 관리</a></li>

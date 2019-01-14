@@ -13,7 +13,7 @@ public class FileDownloadHelper {
 				os.write(data, 0, len);
 			}
 		}catch(Exception ae){
-			System.out.println("aaa");
+			System.out.println("Exception 발생");
 		}		
 		finally {
 			if (is != null)
@@ -25,6 +25,7 @@ public class FileDownloadHelper {
 				try {
 					os.close();
 				} catch (IOException e) {
+					
 				}
 		}
 	}	

@@ -34,7 +34,7 @@ public class ApprovalController extends HttpServlet {
     	IAction action = null;
     	ActionForward forward = null;
     	
-    	/* 기안서 입력 */
+    	/* 湲곗븞�꽌 �엯�젰 */
     	if(command.equals("insertDraft.do")){
     		action = new InsertDraftAction(); 
     		try {
@@ -56,6 +56,20 @@ public class ApprovalController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+    	}else if(command.equals("insertExpence.do")){
+    		action = new InsertDraftFormAction();
+    		try {
+    			forward = action.execute(request, response); 
+    		} catch (Exception e) {
+    			e.printStackTrace();
+    		}
+    	}else if(command.equals("insertExpence.do")){
+    		action = new InsertDraftFormAction();
+    		try {
+    			forward = action.execute(request, response); 
+    		} catch (Exception e) {
+    			e.printStackTrace();
+    		}
     	}
     	
     	

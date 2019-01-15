@@ -13,6 +13,7 @@
 		<typeAlias type="kosta.model.module.vo.ApprovalDraft" alias="ApprovalDraft" />
 		<typeAlias type="kosta.model.module.vo.ApprovalSearch" alias="ApprovalSearch" />
 		<typeAlias type="kosta.model.module.vo.ApprovalVacation" alias="ApprovalVacation" />
+		<typeAlias type="kosta.model.module.vo.ApprovalExpence" alias="ApprovalExpence" />
 		<!-- 스케쥴 -->
 		<typeAlias type="kosta.model.module.vo.ScheduleProject" alias="Project" />
 		<typeAlias type="kosta.model.module.vo.ScheduleCategory" alias="Category" />	
@@ -34,11 +35,10 @@
 	
 	<mappers>
 		<!-- 매퍼 매핑 -->
+		
 		<!-- 공지사항 -->
 		<mapper resource="kosta/mapper/Notice.xml" />
 		<mapper resource="kosta/mapper/Approval.xml"/>
-		<!-- 일정 -->
-		<mapper resource="kosta/mapper/Schedule.xml" />
 		
 	</mappers>
 	

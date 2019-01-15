@@ -17,9 +17,10 @@
 	 
 	<!-- 결재 폼 입력 -->
 	<insert id = "insertExpence" parameterType = "ApprovalExpence">
-		
+		insert into Expence_foam values(seq_draft.nextval,#{foam_id},sysdate,#{expence_type},#{customer_name},#{expence_price},
+			#{commisstion_option},#{commission_price},#{sum_prise})
 	</insert>
-	
+
 	
 	
 	
